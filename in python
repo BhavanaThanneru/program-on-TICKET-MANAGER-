@@ -1,0 +1,29 @@
+  # Define ticket prices
+fare_up_to_5km = 2.50
+fare_6_to_10km = 3.00
+fare_over_10km = 3.50
+
+# Get number of passengers
+num_passengers = int(input())
+
+# Initialize total fare
+total_fare = 0.0
+
+# Loop through each passenger
+for passenger in range(num_passengers):
+  # Get distance traveled
+  distance = float(input())
+
+  # Apply fare based on distance
+  if distance <= 5:
+    fare = fare_up_to_5km
+  elif distance <= 10:
+    fare = fare_6_to_10km
+  else:
+    fare = fare_over_10km
+
+  # Add individual fare to total fare
+  total_fare += fare
+
+# Display total fare with 2 decimal places
+print(f"{total_fare:.2f}")
